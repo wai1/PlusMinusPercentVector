@@ -1,3 +1,12 @@
+/** 
+ * PlusMinusPercentVector is a challenge question from the website HackerRank
+ * You are given an array of integers and need to calculate the fractions of its
+ * elements that are positive, negative, and are zero. Output the percentages on
+ * separate lines. 
+ * 
+ * Author of program: Walt Iddings
+ * */
+
 #include <iostream>
 #include <iomanip>
 #include <vector>
@@ -13,6 +22,7 @@ void plusMinus(vector<int> arr) {
     double percentNeg = 0.0;
     double percentZero = 0.0;
 
+    // Iterate through the vector
     for (int i = 0; i < vecSize; i++)
     {
         if (arr[i] < 0)
@@ -23,10 +33,12 @@ void plusMinus(vector<int> arr) {
             numZero += 1;
     }
 
+    // Calculate the percentages
     percentPos = ((double)numPos) / vecSize;
     percentNeg = ((double)numNeg) / vecSize;
     percentZero = ((double)numZero) / vecSize;
 
+    // Output the percentages
     cout << setprecision(6);
     cout << fixed << percentPos << endl;
     cout << fixed << percentNeg << endl;
